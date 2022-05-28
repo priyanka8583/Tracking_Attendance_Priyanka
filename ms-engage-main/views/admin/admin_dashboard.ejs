@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATS | Admin | Dashboard</title>
+    <%- include('../partials/header') %>
+
+    <style>
+
+      #view-card {
+        background-color: #9dfac7;
+      }
+      #view-card:hover {
+        opacity: 0.8;
+      }
+
+      #add-card {
+        background-color: #9aaef5;
+      }
+      #add-card:hover {
+        opacity: 0.8;
+      }
+
+      #settings-card {
+        background-color: #faa65c;
+      }
+      #settings-card:hover {
+        opacity: 0.8;
+      }
+
+      #profile-card {
+        background-color: #f0b4cb;
+      }
+      #profile-card:hover {
+        opacity: 0.8;
+      }
+
+    </style>
+  </head>
+  <body>
+    <%- include('../partials/sidebar') %>
+    <div class="page">
+      <!-- navbar-->
+      <header class="header">
+        <%- include('../partials/navbar') %>
+      </header>
+      
+      <!-- Page Header-->
+      <header class="py-4">
+        <div class="container-fluid py-2">
+          <h1 class="h3 fw-normal mb-0">Admin Dashboard</h1>
+        </div>
+      </header>
+      <!-- Forms Section-->
+      <section class="pb-5"> 
+        <div class="container-fluid">
+          <div class="row">
+            
+            <div class="col-lg-6 col-sm-12">
+              <a href="<%= origin %>/admin/<%= userId %>/view_students" style="width: 100%; text-decoration:none;">
+              <div id="view-card" class="card" style="width: 100%; height: 100%;">
+                <div class="card-body pb-4 pt-4">
+                  <h2 class="display-4" style="font-size: 48px; color: black; text-align: center;">View Students</h2>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <a href="<%= origin %>/admin/<%= userId %>/add_students" style="width: 100%; text-decoration:none;">
+              <div id="add-card" class="card" style="width: 100%;">
+                <div class="card-body pb-4 pt-4">
+                  <h2 class="display-4" style="font-size: 48px; color: black; text-align: center;">Add New Students</h2>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <a href="<%= origin %>/admin/<%= userId %>/dashboard" style="width: 100%; text-decoration:none;">
+              <div id="settings-card" class="card" style="width: 100%;">
+                <div class="card-body pb-4 pt-4">
+                  <h2 class="display-4" style="font-size: 48px; color: black; text-align: center;">Settings</h2>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <a href="<%= origin %>/admin/<%= userId %>/profile" style="width: 100%; text-decoration:none;">
+              <div id="profile-card" class="card" style="width: 100%;">
+                <div class="card-body pb-4 pt-4">
+                  <h2 class="display-4" style="font-size: 48px; color: black; text-align: center;">My Profile</h2>
+                </div>
+              </div>
+              </a>
+            </div>
+            
+
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

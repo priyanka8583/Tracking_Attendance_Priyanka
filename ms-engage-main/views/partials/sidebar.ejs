@@ -1,0 +1,44 @@
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <!-- Sidebar Header    -->
+    <div class="sidebar-header d-flex align-items-center justify-content-center p-3 mb-3">
+      <!-- User Info-->
+      <div class="sidenav-header-inner text-center">
+        <!-- <img class="img-fluid rounded-circle avatar mb-3" src="img/avatar-7.jpg" alt="person"> -->
+        <h2 class="h5 text-white text-uppercase mb-0"><%= sidebar.menu_username %></h2>
+        <p class="text-sm mb-0 text-muted"><%= sidebar.menu_role %></p>
+      </div>
+      <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
+        <p class="h1 m-0">BD</p></a>
+    </div>
+    <!-- Sidebar Navigation Menus-->
+    <!-- <span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span> -->
+    <ul class="list-unstyled">
+      <% for(menu_link of sidebar.menu_links) { %>                  
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="<%= menu_link.link %>"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#real-estate-1"> </use>
+            </svg><%= menu_link.title %>
+          </a>
+        </li>
+      <% } %>
+      
+
+
+      <!-- <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#browser-window-1"> </use>
+          </svg>Form fill up</a>
+        <ul class="collapse list-unstyled" id="exampledropdownDropdown">
+          <li><a class="sidebar-link" href="./jnf.html">JNF</a></li>
+          <li><a class="sidebar-link" href="./inf.html">INF</a></li> 
+        </ul> 
+      </li> -->
+      <hr>
+      <li class="sidebar-item"><a class="sidebar-link" href="<%= origin %>/index/logout"> 
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#disable-1"> </use>
+          </svg>Logout</a>
+      </li>
+  </nav>
