@@ -1,8 +1,8 @@
 # Tracking_Attendance_Priyanka
 
 **NETWORK MODEL:Face-API
-MODULE:face detection and face recognition
-DATABASE:MongoDB
+**MODULE:face detection and face recognition
+**DATABASE:MongoDB
 
 **steps to follow:**
 ->open CMD in the root folder of project and run:
